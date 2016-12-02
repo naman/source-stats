@@ -1,0 +1,96 @@
+public class PA.Test extends java.lang.Object
+{
+    static java.lang.String field1;
+    static int field2;
+    static boolean field3;
+
+    public void <init>()
+    {
+        PA.Test this;
+
+        this := @this: PA.Test;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        byte x;
+        int sum, i;
+
+        args := @parameter0: java.lang.String[];
+        staticinvoke <PA.Test: void bun2()>();
+        x = 10;
+        sum = 0;
+        i = 0;
+        goto label1;
+
+     label0:
+        sum = sum + 1;
+        i = i + 1;
+
+     label1:
+        if i < x goto label0;
+
+        return;
+    }
+
+    public static void bun2()
+    {
+        byte xyz;
+        boolean $z0;
+
+        xyz = 42;
+        $z0 = <PA.Test: boolean field3>;
+        staticinvoke <PA.Test: int bar(boolean)>($z0);
+        staticinvoke <PA.Test: java.lang.String foo(int)>(3);
+        return;
+    }
+
+    private static int bar(boolean) throws java.lang.NullPointerException
+    {
+        boolean field32;
+        PA.Test $r0;
+        byte b;
+        int a;
+
+        field32 := @parameter0: boolean;
+        $r0 = new PA.Test;
+        specialinvoke $r0.<PA.Test: void <init>()>();
+        virtualinvoke $r0.<PA.Test: void bun()>();
+        b = 13;
+        a = 2 * b;
+        return a;
+    }
+
+    private static java.lang.String foo(int)
+    {
+        int f;
+        boolean l1;
+        java.lang.String tummy;
+
+        f := @parameter0: int;
+        if f <= 2 goto label0;
+
+        l1 = 1;
+
+     label0:
+        tummy = "bhook";
+        return tummy;
+    }
+
+    void bun()
+    {
+        PA.Test this;
+        byte xyz;
+        boolean $z0;
+
+        this := @this: PA.Test;
+        xyz = 42;
+        $z0 = <PA.Test: boolean field3>;
+        staticinvoke <PA.Test: int bar(boolean)>($z0);
+        staticinvoke <PA.Test: java.lang.String foo(int)>(xyz);
+        return;
+    }
+}
